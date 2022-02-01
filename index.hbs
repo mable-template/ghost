@@ -1,8 +1,8 @@
 {{!< default}}
 
 <!-- Title Section -->
-<section class="section-theme section-large" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}} id="title">
-	<div class="section-thin-xs container-large">
+<section class="section-thin-xs section-theme section-large" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}} id="title">
+	<div class="container-large">
 		<div class="row">
 			<header class="section-edgeless">{{navigation}}</header>
 			{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{t "Logo"}}" style="height:72px">
