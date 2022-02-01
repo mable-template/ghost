@@ -1,0 +1,11 @@
+<header class="section-thin section-theme">
+	<div class="container-large">
+		<div class="row">
+			<a href="{{@blog.url}}" style="text-decoration:none">
+				{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{t "Logo"}}" style="height:calc(var(--title-size) * var(--body-scale) * 7/9 * var(--style-scale) * var(--section-scale));">
+				{{else}}<h3>{{@blog.title}}</h3>{{/if}}
+			</a>
+			{{navigation}}
+		</div>
+	</div>
+</header>

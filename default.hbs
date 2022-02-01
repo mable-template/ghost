@@ -1,0 +1,36 @@
+<html lang="{{lang}}">
+	<head>
+		<!-- Page Info -->
+		<title>{{meta_title}}</title>
+		
+		<!-- CSS Sheets -->
+		<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+		
+		<!-- Themes -->
+		<link type="text/css" rel="stylesheet" href="{{asset "themes/theme-name.css"}}">
+		
+		<!-- Ghost Header -->
+		{{ghost_head}}
+	</head>
+	<body class="{{body_class}}">
+		
+		{{{body}}}
+		
+		<!-- Footers -->
+		<footer class="section-theme">
+			<div class="container-large">
+				<div class="row text-center">
+					<header class="section-edgeless">{{navigation}}</header>
+					<h2><a href="{{@blog.url}}/rss/">{{t "Subscribe via RSS!"}}</a>
+					{{#if @labs.subscribers}}{{subscribe_form placeholder=(t "youremail@example.com")}}{{/if}}</h2>
+				</div>
+			</div>
+		</footer>
+		<footer class="section-thin section-dark">
+			<div class="row text-center">
+				<p><a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; {{t "All rights reserved."}}</p>
+			</div>
+		</footer>
+		{{ghost_foot}}
+	</body>
+</html>

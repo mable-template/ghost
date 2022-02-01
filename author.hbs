@@ -1,0 +1,44 @@
+{{!< default}}
+
+{{> "site-header"}}
+
+{{#author}}
+
+<!-- Author -->
+<section class="section-dark" id="author-about">
+	<div class="container">
+		{{#if profile_image}}
+			<div class="row grid">
+				<div class="col-6 col-xs-12">
+					<img src="{{profile_image}}" alt="{{{t '{name}’s Picture' name=name }}}">
+				</div>
+				<div class="col-6 col-xs-12">
+					<h1>{{name}}</h1>
+					<p>{{bio}}</p>
+					<ul>
+						{{#if location}}<li>{{location}}</li>{{/if}}
+						{{#if website}}<li><a href="{{website}}">{{website}}</a></li>{{/if}}
+					</ul>
+				</div>
+			</div>
+		{{else}}
+			<div class="row">
+				<h1>{{name}}</h1>
+				<p>{{bio}}</p>
+				<ul>
+					{{#if location}}<li>{{location}}</li>{{/if}}
+					{{#if website}}<li><a href="{{website}}">{{website}}</a></li>{{/if}}
+				</ul>
+			</div>
+		{{/if}}
+		</div>
+	</div>
+</section>
+{{/author}}
+		
+<!-- Posts -->
+<section class="section-light dark-enabled" id="posts">
+	<div class="container-large">
+		{{> "loop"}}
+	</div>
+</section>

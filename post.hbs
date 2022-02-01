@@ -1,0 +1,26 @@
+{{!< default}}
+
+{{> "site-header"}}
+
+{{#post}}
+
+<!-- Text -->
+<section class="section-light dark-enabled" id="text">
+	<div class="container">
+		<div class="row">
+			<h1>{{{title}}}</h1>
+			<time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+			{{> "authors" }}
+			{{tags prefix=(t " on ") separator=" | "}}
+		</div>
+	</div>
+	{{#if feature_image}}<div class="container-large">
+		<img src="{{feature_image}}">
+	</div>{{/if}}
+	<div class="container">
+		<div class="row">
+			{{content}}
+		</div>
+	</div>
+</section>
+{{/post}}

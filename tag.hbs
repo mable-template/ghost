@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{> "site-header"}}
+
+<!-- Title Section -->
+<section class="section-thin section-dark">
+	<div class="container-large">
+		<div class="row">
+			<h1>{{tag.name}}</h1>
+			{{#if tag.description}}<p>{{tag.description}}</p>{{/if}}
+			<p>{{plural pagination.total empty=(t "A collection of posts") singular=(t "A collection of 1 post") plural=(t "A collection of % posts")}}</p>
+			{{#if tag.feature_image}}<img src="{{tag.feature_image}}" alt="{{name}}">{{/if}}
+		</div>
+	</div>
+</div>
+
+<!-- Post Section -->
+<section class="section-light dark-enabled" id="posts">
+	<div class="container-large">
+  			{{> "loop" }}
+	</div>
+</section>
