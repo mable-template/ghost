@@ -2,7 +2,7 @@
 
 <!-- Title Section -->
 <section class="section-theme section-large" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}} id="title">
-	<div class="container-large">
+	<div class="section-thin-xs container-large">
 		<div class="row">
 			<header class="section-edgeless">{{navigation}}</header>
 			{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{t "Logo"}}" style="height:72px">
@@ -13,7 +13,7 @@
 </section>
 
 <!-- Post Section -->
-<section class="section-light dark-enabled" id="posts">
+<section class="section-thin-xs section-light dark-enabled" id="posts">
 	<div class="container-large">
   			{{> "loop" }}
 	</div>

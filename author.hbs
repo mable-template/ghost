@@ -5,7 +5,7 @@
 {{#author}}
 
 <!-- Author -->
-<section class="section-dark" id="author-about">
+<section class="section-thin section-dark" id="author-about">
 	<div class="container">
 		{{#if profile_image}}
 			<div class="row grid">
@@ -15,10 +15,8 @@
 				<div class="col-6 col-xs-12">
 					<h1>{{name}}</h1>
 					<p>{{bio}}</p>
-					<ul>
-						{{#if location}}<li>{{location}}</li>{{/if}}
-						{{#if website}}<li><a href="{{website}}">{{website}}</a></li>{{/if}}
-					</ul>
+					{{#if location}}<p><b>Location</b>: {{location}}</p>{{/if}}
+					{{#if website}}<p><b>Website</b>: <a href="{{website}}">{{website}}</a></p>{{/if}}
 				</div>
 			</div>
 		{{else}}
@@ -37,7 +35,7 @@
 {{/author}}
 		
 <!-- Posts -->
-<section class="section-light dark-enabled" id="posts">
+<section class="section-thin-xs section-light dark-enabled" id="posts">
 	<div class="container-large">
 		{{> "loop"}}
 	</div>
